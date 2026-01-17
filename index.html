@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Privacy Policy - Pre-Flight Visualizer</title>
+    <title>Privacy Policy - OTT Visualizer</title>
     <style>
         body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
         h1 { color: #333; }
@@ -9,36 +9,44 @@
     </style>
 </head>
 <body>
-    <h1>Privacy Policy for Pre-Flight Visualizer</h1>
-    <p>Last Updated: 1/15/2026</p>
+    <h1>Privacy Policy for OTT Visualizer</h1>
+    <p>Last Updated: 1/17/2026</p>
     <hr>
    
-    <p>Privacy Policy for Pre Flight Check
+    <p>Privacy Policy for OTT Visualizer
         
 1. Introduction
-"Pre Flight Check" (the "Extension") is a productivity tool designed to help users validate text length within Google Sheets against specific device constraints. We respect your privacy and are committed to protecting it. This policy explains how we handle your data.
+OTT Visualizer is a Google Chrome Extension designed to assist Quality Assurance (QA) and Content Operations teams in validating metadata for Over-The-Top (OTT) streaming devices. We are committed to protecting your privacy and ensuring the security of your data.
+This Privacy Policy describes how OTT Visualizer accesses, uses, and protects user data obtained through Google APIs, specifically Google Drive and Google Sheets.
+2. Data Collection and Usage
+OTT Visualizer does not collect, store, or transfer user data to any external or third-party servers. All data processing is performed locally within the user's browser instance.
+Google User Data: We access your Google Account email address (identity scope) solely to authenticate your session via Google OAuth 2.0. This ensures that the extension acts on behalf of the authorized user.
+Google Drive Files: We use the drive.readonly scope strictly to populate the Google Picker interface. This allows you to browse and select the specific spreadsheet you wish to analyze. We do not scan, download, or store your file library.
+Google Sheets Data: We use the spreadsheets scope to:
+Read: Fetch text strings from the user-designated columns in your active spreadsheet.
+Write: Insert "PASS/FAIL" verdicts and apply conditional color formatting (Green/Red) directly back into your spreadsheet.
+We do not use this data for advertising, market research, or any purpose other than the specific functionality of the extension described above.
+3. Data Protection Mechanisms
+We employ strict security measures to protect your information:
+Client-Side Processing: The logic for analyzing text width and device constraints runs entirely in JavaScript on your local machine. Your spreadsheet content is never sent to our servers because we do not have servers.
+HTTPS Encryption: All communication between the extension and Google's APIs (Drive and Sheets) occurs over secure, encrypted HTTPS channels (TLS 1.2+).
+Sandboxing: The file selection interface uses a sandboxed iframe (picker_sandbox.html) to isolate the Google Picker API, preventing cross-site scripting (XSS) vulnerabilities.
+4. Data Retention Policy
+OTT Visualizer operates on a zero-retention basis:
+Transient Access: Data read from your spreadsheet is held in your browser's volatile memory (RAM) only for the duration of the "Run Diagnostic" execution.
+No Persistence: Once the browser window is closed or the diagnostic run is complete, all fetched data is immediately discarded. We do not maintain any databases or logs of your content.
+5. Data Sharing and Third Parties
+We do not share, sell, or disclose your data to any third parties.
+The extension interacts directly with Google APIs. Google’s handling of your data is governed by the Google Privacy Policy.
+6. Limited Use Disclosure
+OTT Visualizer's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.
+7. Contact Information
+If you have any questions about this Privacy Policy or our data practices, please contact the developer at: Harshil.chaudhary3@gmail.com
 
-2. Data We Collect
-The Extension interacts with your Google Sheets data solely at your request.
-Sheet Data: When you click "Run Diagnostics," the Extension reads the text in the specific column you select in your active Google Sheet.
-Authentication: We use chrome.identity to request an OAuth2 token from Google. This token is used strictly to authenticate API calls to the Google Sheets API on your behalf.
-        
-3. How We Use Your Data
-Validation: The text data retrieved from your Sheet is processed locally within your browser to calculate pixel width and line counts.
-Writing Results: The Extension writes "Pass/Fail" verdicts and formatting (color highlights) back to your Google Sheet.
-No External Transfer: We do not send your spreadsheet data, text, or authentication tokens to any external servers, databases, or third-party analytics services. All processing happens between your browser and Google's official APIs.
-
-4. Data Storage
-The Extension saves your preference settings (like the last used "Device Profile") locally in your Chrome browser using chrome.storage.local. This data never leaves your device.
-        
-5. Third-Party Services
-The Extension relies on the Google Sheets API. Usage of that data is subject to Google's Privacy Policy.
-        
-6. Contact: If you have questions about this policy, please contact the developer via the support link on the Chrome Web Store listing.
 </p>
     <h3>Data Protection Mechanisms</h3>
 <p>
-    Pre-Flight Visualizer employs industry-standard security measures to ensure the safety of your data.
+    OTT Visualizer employs industry-standard security measures to ensure the safety of your data.
     All data transmission between the application and Google's servers occurs over secure, encrypted protocols (HTTPS/TLS).
     We do not store your Google credentials or access tokens on our servers; they are maintained securely within your browser's local storage or the session state.
 </p>
