@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pre-Flight Visualizer - Home</title>
+    <title>OTT Visualizer - Home</title>
     <style>
         body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #666; border-top: 1px solid #ddd; padding-top: 20px; }
@@ -9,34 +9,44 @@
 </head>
 <body>
 
-    <h1>Pre-Flight Visualizer - Home</h1>
+    <h1>OTT Visualizer - Home</h1>
 
     <h3>About the App</h3>
     <p>
-        Pre-Flight Check is a professional quality assurance utility designed for Operations and Supply Chain Engineers. It eliminates costly metadata rejections by simulating how your content descriptions will render on end-user hardware before they are submitted. Stop guessing if your headlines, subtitles, or ad copy will get cut off. This extension greatly helps content creators, distributors, marketers, and operations teams to ensure their text fits perfectly on any screen before it goes live.
+        OTT is a professional quality assurance utility designed for Operations and Supply Chain Engineers. It eliminates costly metadata rejections by simulating how your content descriptions will render on end-user hardware before they are submitted. Stop guessing if your headlines, subtitles, or ad copy will get cut off. This extension greatly helps content creators, distributors, marketers, and operations teams to ensure their text fits perfectly on any screen before it goes live.
     </p>
 
     <h3>How it Works</h3>
     <p>
         THE PROBLEM:
 
-Data might look perfect in a spreadsheet, but when loaded onto a Legacy Set-Top Box, Smart TV, or Mobile App, it often gets cut off due to "Overscan," unique font metrics, or pixel density limitations. This leads to platform rejections and redelivery fees.
+OTT Visualizer is a productivity tool designed for QA and Content Operations teams who manage metadata for streaming platforms.
 
-THE SOLUTION:
+Manually checking if movie titles and descriptions fit within the UI constraints of different devices (Apple TV, Roku, Fire TV, etc.) is error-prone and tedious. OTT Visualizer automates this process directly within Google Sheets.
 
-This extension utilizes a proprietary browser-based emulation engine to "draw" your metadata invisibly in memory using the exact specifications of target devices. It then stamps a PASS/FAIL verdict directly onto your Google Sheet. Simply input the column you are checking for and the target column where you want the result (Pass/Fail). This helps to understand if your descriptive metadata is too long to get rejected on multiple platforms.
+Key Features:
 
-KEY FEATURES:
+Device Profiles: Select from standard OTT device profiles (e.g., Apple TV 4K, Roku 1080p, Fire TV Stick) to apply specific font-size and width constraints.
 
-Multi-Platform Emulation: Test against industry-standard profiles including Apple TV, Roku, Amazon Fire TV, and Samsung Tizen.
+Google Drive Integration: Securely select your spreadsheet using the official Google Picker.
 
-Strict Mode: Specialized support for Legacy Cable Set-Top Boxes (monospaced fonts + 10% overscan).
+Automated Diagnostics: The extension reads your metadata column, calculates line wrapping based on the selected device's rendering logic, and generates a "PASS" or "FAIL" verdict.
 
-Mobile Logic: Predicts "Read More" truncation points for Mobile and Tablet viewports.
+Visual Feedback: Automatically formats the sheet with Green (Pass) and Red (Fail) indicators for immediate visual validation.
 
-Seamless Integration: Connects directly to your Google Sheet to flag errors in seconds.
+How to use:
 
-Privacy First: All emulation happens locally. Your proprietary data is never sent to external servers.
+Open a Google Sheet containing your metadata.
+
+Open the OTT Visualizer extension.
+
+Select the target device (e.g., "Roku (1080p)").
+
+Enter the source column (e.g., "A") and destination column (e.g., "B").
+
+Click "Run Diagnostic."
+
+Privacy Note: This extension processes data directly within your browser and Google Sheets. No data is sent to external servers or third parties.
 
     </p>
 
